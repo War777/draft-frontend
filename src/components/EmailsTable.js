@@ -78,7 +78,7 @@ class EmailsTable extends Component {
     * according the current page and documents limit per page
     */
     getUrl(){
-        var url = 'http://localhost:8080/draft/public/api/emails?page=' + this.state.page + '&limit=' + this.state.limit;
+        var url = 'http://localhost:8080/draft-backend/public/api/emails?page=' + this.state.page + '&limit=' + this.state.limit;
         return url;
     }
 
