@@ -9,4 +9,8 @@ To run this project you need to open your terminal at your development folder, c
 
     npm install
   
+**Run the project:**
+
+    npm run devstart
+
 Now you can access through your xampp server on http://localhost:3000/
