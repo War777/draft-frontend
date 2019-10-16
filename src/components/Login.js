@@ -25,7 +25,7 @@ class Login extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let url = 'http://http://167.99.236.30/draft-backend/public/api/login';
+    let url = 'http://167.99.236.30/draft-backend/public/api/login';
     if (this.state.email === '' || this.state.password === '') {
       alert('Please enter your E-mail and password.');
       return null;
