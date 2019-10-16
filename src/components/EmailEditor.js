@@ -134,7 +134,7 @@ class EmailEditor extends Component {
       }, 
       true, 
     );
-    let url = 'http://localhost:8080/draft-backend/public/api/sendEmail';
+    let url = 'http://167.99.236.30/draft-backend/public/api/sendEmail';
     let user_id = localStorage.getItem('user_id');
     let api_token = localStorage.getItem('api_token');
     if (!body || !subject) {
