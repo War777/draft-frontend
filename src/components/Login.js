@@ -32,7 +32,7 @@ class Login extends Component {
     }
     fetch(url, {
         method: 'get',
-        body: JSON.stringify(this.state),
+        // body: JSON.stringify(this.state),
         headers: {
             'Accept': 'application/json, text/plain, */*',
             'Content-type': 'application/json'
