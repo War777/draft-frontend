@@ -39,7 +39,6 @@ class Login extends Component {
         }
     })
     .then((res) => {
-      console.log('1', res);
       if (!res.ok && res.status === 400) {
         alert('Invalid credentials');
         throw new Exception('Invalid credentials');
@@ -47,13 +46,12 @@ class Login extends Component {
       return res.json();
     })
     .then((res) => {
-      console.log('2', res);
-      // this.setState({
-      //   name: res.user.name,
-      // });
-      // localStorage.setItem('user_id', res.user_id);
-      // localStorage.setItem('api_token', res.api_token);
-      // this.props.setLoggedInStatus(true);
+      this.setState({
+        name: res.user.name,
+      });
+      localStorage.setItem('user_id', res.user_id);
+      localStorage.setItem('api_token', res.api_token);
+      this.props.setLoggedInStatus(true);
     })
     .catch((err) =>console.log('error', err));
   }
