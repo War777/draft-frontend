@@ -25,7 +25,7 @@ class Login extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let url = 'http://localhost:8080/draft-backend/public/api/login';
+    let url = 'http://localhost:80/draft-backend/public/api/login';
     if (this.state.email === '' || this.state.password === '') {
       alert('Please enter your E-mail and password.');
       return null;
@@ -40,6 +40,7 @@ class Login extends Component {
     })
     .then((res) => {
       if (!res.ok && res.status === 400) {
+        console.log(res);
         alert('Invalid credentials');
         throw new Exception('Invalid credentials');
       }      
